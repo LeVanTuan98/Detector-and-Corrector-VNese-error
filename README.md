@@ -1,2 +1,2 @@
-# Detector-and-Corrector-VNese-error-
+# Detector-and-Corrector-VNese-errors
 Project NLP
