@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Model Deployment</title>
+</head>
+<body>
+    <h1>Model deployment</h1>
+    <p> Enter your name</p>
+    <form action="/" method="POST">
+        <input type="text" name="hrs" placeholder="user name">
+        <input type="submit">
+    </form>
+    {% if pred %}
+        <p> Your prediction</p>
+        <p>{{pred}}</p>
+    {% endif %}
+
+</body>
+</html>
