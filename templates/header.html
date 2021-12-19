@@ -1,0 +1,93 @@
+<head>
+    
+<title>Simple Personal</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="{{url_for('static', filename='./css/style.css')}}" type="text/css" media="screen, projection, tv" />
+<link rel="stylesheet" href="{{url_for('static', filename='./css/style-print.css')}}" type="text/css" media="print" />
+
+
+<script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+<script type="text/javascript">
+    tinymce.init({
+        selector:'textarea',
+        entity_encoding : "raw"
+    });
+</script>
+<script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+
+<style>
+    .check_space{
+        padding: 20pt;
+    }
+    .check_space > span, button{
+        font-size: 15px
+    }
+
+
+    .word_btn {
+        background-color: white;
+        color: red;
+        border: none;
+        outline: none;
+    }
+
+    .normal_word{
+        float:left;
+        padding-right: 10px;
+    }
+
+    .error_word{
+        float: left;
+        position: relative;
+        padding-right: 10px;
+    }
+
+    .hide {
+        display: none;
+        position: absolute;
+        background-color: #f1f1f1;
+        min-width: 100px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+    }
+
+    .hide a {
+        color: green;
+        padding: 12px 5px;
+        text-decoration: none;
+        display: block;
+        font-weight: normal;
+    }
+
+    .hide a:hover {
+        background-color: #ddd;
+    }
+
+    .error_word:hover .hide {
+        display: block;
+    }
+
+    .error_word:hover button{
+        background-color: yellow;
+    }
+
+    #btn_sub {
+        background-color: green;
+        margin: 10px auto;
+        /* margin-top: 100px; */
+        border: none;
+        color: white;
+        padding: 16px 32px;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+
+</style>
+
+</head>
+
+
+
+
+
