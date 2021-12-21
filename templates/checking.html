@@ -39,7 +39,7 @@
                     <div class="error_word">
                       <button class="word_btn">{{d_w}}</button>
                       <div class='hide'>
-                        {% for w in c_words%}
+                        {% for w in c_words[:n]%}
                           <a class='correct_word'>{{w}}</a>
                         {% endfor %}
 
@@ -53,6 +53,15 @@
                   {% endif %}
                 {% endfor %}
               </div>
+          </div>
+          <div style="padding: 15px 5px; margin-left: 10px;">
+            <label>Số từ gợi ý:</label>
+            <select name="num_words" id="num_words">
+              {%for i in range(5):%}
+                <option value="{{i+1}}" {%if (i+1) == n%} selected {% endif %}>{{i+1}}</option>
+              {% endfor %}
+            
+            </select>
           </div>
         </div>
       </div>
@@ -70,6 +79,12 @@
       word.text($(this).text());
       word.css("color", "green")
     });
+
+    $('#num_words').change(function(){
+      var num_words = $(this).val();
+      console.log(num_words);
+      window.location.href = '/check?n=' + num_words;
+    })
 
   </script>
 </body>
