@@ -22,6 +22,7 @@ from transformers import AutoTokenizer, XLMRobertaModel, XLMRobertaForMaskedLM
 # from sklearn.metrics import precision_score, recall_score, f1_score, accuracy_score
 # import pickle
 from pyunpack import Archive
+from hardmasked_predict import *
 
 logger = logging.getLogger(__name__)
 
@@ -120,7 +121,7 @@ class HardMasked(nn.Module):
 def load_model():
     print('Load Model')
 
-    detector_path = 'model/Detector_final.pkl'
+    detector_path = 'model/Detector.pkl'
 
     detector_tokenizer_path = 'Text_correction/spm_tokenizer.model'
 
@@ -147,9 +148,9 @@ def extract_model():
 
 def predict(model=None, input=''):
     # s = 'xe đạp lách cách tôi vẫn chưa quen, đường thì tối chơi vơi còn tôi vẫn cứ đứng đợi'
-    model(input)
+    # model(input)
 
     # result = [('aa', 1, ('a', 'b', 'c')), ('bb', 0, ()), ('cc', 1, ('f', 'b', 'e')), ('dd', 0, ()), ('ee', 0, ()),
     #           ('aa', 1, ('a', 'v', 'c')), ('bb', 0, ()), ('cc', 1, ('a', 'v', 'c')), ('dd', 0, ()), ('ee', 0, ())]
-    return model(input)
+    return predict(input)
 
